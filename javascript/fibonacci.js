@@ -1,5 +1,13 @@
 function fibonacci(num) {
-  // type your code here
+  let first_two = [0, 1]
+
+  for (let i = (num - 1); i > 0; i--) {
+    const sum = first_two[0] + first_two[1]
+
+    first_two = [first_two[1], sum]
+  }
+
+  return first_two[1]
 }
 
 if (require.main === module) {

@@ -1,5 +1,12 @@
 def fibonacci(num)
-  # type your code in here
+  first_two = [0, 1]
+
+  (num - 1).times do 
+    sum = first_two[0] + first_two[1]
+    first_two = [first_two[1], sum]
+  end
+
+  first_two.last
 end
 
 if __FILE__ == $PROGRAM_NAME
